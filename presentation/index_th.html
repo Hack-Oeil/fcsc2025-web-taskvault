@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <!--Page Title-->
+    <title>Hack-Oeil - Les CTFs de Cyrhades</title>
+    <!--Meta Keywords and Description-->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" title="Favicon" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // ตรวจสอบว่าหน้าต่างอยู่ใน iframe หรือไม่
+            if (window.self !== window.top) {
+                document.querySelectorAll('a').forEach((link) => {
+                    link.addEventListener('click', (event) => {
+                        const a = event.target.closest('a[href^="http"]');
+                        if (a) {
+                            event.preventDefault();
+                            window.parent.postMessage({
+                                type: "open-external",
+                                url: a.href
+                            }, "*");
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!--Main Content Area-->
+        <main id="content">
+            <!--Ctf-->
+            <section class="ctf scrollto">
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>ความท้าทาย #541</h3>
+                            <h2 class="section-title">TaskVault</h2>
+                            <p>
+ในระหว่างการตรวจสอบความปลอดภัยที่ TaskVault Industries คุณได้ค้นพบแอปพลิเคชันการจัดการงานภายในที่เรียกว่า “TaskVault” แอปพลิเคชันนี้ดูเหมือนจะมีข้อมูลที่ละเอียดอ่อนเกี่ยวกับโครงการของบริษัท ซึ่งอาจรวมถึงข้อมูลรับรองการเข้าถึงและความลับ ทีมงานของเราสามารถระบุเซิร์ฟเวอร์ที่โฮสต์แอปพลิเคชันได้สำเร็จ แต่เซิร์ฟเวอร์ได้รับการปกป้องด้วยพร็อกซีหลายชั้นและระบบการตรวจสอบสิทธิ์ ภารกิจของคุณคือการใช้ประโยชน์จากจุดอ่อนของสถาปัตยกรรมนี้เพื่อหลีกเลี่ยงการป้องกันและเข้าถึงข้อมูลลับที่จัดเก็บไว้ใน TaskVault
+                            </p>
+                            <h4>ไฟล์ที่ต้องศึกษา:</h4>
+                            <p>../files/taskvault.tar.xz</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>FCSC 2025</h3>
+                            <h2 class="section-title">Hackropole</h2>
+                            <p class="section-subtitle">
+                                ลิงก์อย่างเป็นทางการ:
+                                <a target="_blank"
+                                    href="https://hackropole.fr/fr/challenges/web/fcsc2025-web-taskvault/">https://hackropole.fr/fr/challenges/web/fcsc2025-web-taskvault/</a>
+                                <br />
+                                ผู้เขียน: Mizu
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>การเรียนรู้</h3>
+                            <h2 class="section-title">เอกสารประกอบและวิดีโอ</h2>
+                            <p class="section-subtitle">
+                                ยังไม่มีเอกสารในขณะนี้
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>ความช่วยเหลือ</h3>
+                            <h2 class="section-title">คำแนะนำและคำใบ้</h2>
+                            <p class="section-subtitle">
+                                <a target="_blank"
+                                    href="https://discord.com/channels/1175764392307077120/1175764601716092948">เธรดบน Discord</a>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <!--End of Ctf-->
+        </main>
+        <!--End Main Content Area-->
+
+        <a id="scrollUp" href="#wrapper" style="position: fixed; z-index: 1000;"
+            aria-label="เลื่อนขึ้นไปด้านบน" title="กลับไปด้านบน"></a>
+    </div>
+</body>
+
+</html>

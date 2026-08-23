@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <!--Page Title-->
+    <title>Hack-Oeil - Les CTFs de Cyrhades</title>
+    <!--Meta Keywords and Description-->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" title="Favicon" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Comprueba si la ventana está dentro de un iframe
+            if (window.self !== window.top) {
+                document.querySelectorAll('a').forEach((link) => {
+                    link.addEventListener('click', (event) => {
+                        const a = event.target.closest('a[href^="http"]');
+                        if (a) {
+                            event.preventDefault();
+                            window.parent.postMessage({
+                                type: "open-external",
+                                url: a.href
+                            }, "*");
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!--Main Content Area-->
+        <main id="content">
+            <!--Ctf-->
+            <section class="ctf scrollto">
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>Challenge #541</h3>
+                            <h2 class="section-title">TaskVault</h2>
+                            <p>
+Durante una auditoría de seguridad en TaskVault Industries, descubrió una aplicación interna de gestión de tareas llamada “TaskVault”. Esta aplicación parece contener información confidencial sobre los proyectos de la empresa, incluidos potencialmente credenciales de acceso y secretos. Nuestro equipo logró identificar el servidor que aloja la aplicación, pero este está protegido por múltiples capas de proxy y un sistema de autenticación. Su misión es explotar las debilidades de esta arquitectura para eludir las protecciones y acceder a los datos confidenciales almacenados en TaskVault.
+                            </p>
+                            <h4>Archivo para estudiar:</h4>
+                            <p>../files/taskvault.tar.xz</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>FCSC 2025</h3>
+                            <h2 class="section-title">Hackropole</h2>
+                            <p class="section-subtitle">
+                                Enlace oficial:
+                                <a target="_blank"
+                                    href="https://hackropole.fr/fr/challenges/web/fcsc2025-web-taskvault/">https://hackropole.fr/fr/challenges/web/fcsc2025-web-taskvault/</a>
+                                <br />
+                                Autor: Mizu
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>Aprendizaje</h3>
+                            <h2 class="section-title">Documentación y Vídeos</h2>
+                            <p class="section-subtitle">
+                                Sin documentación por el momento
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>Ayuda</h3>
+                            <h2 class="section-title">Consejos y pistas</h2>
+                            <p class="section-subtitle">
+                                <a target="_blank"
+                                    href="https://discord.com/channels/1175764392307077120/1175764601716092948">Hilo en Discord</a>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <!--End of Ctf-->
+        </main>
+        <!--End Main Content Area-->
+
+        <a id="scrollUp" href="#wrapper" style="position: fixed; z-index: 1000;"
+            aria-label="Volver arriba" title="Volver al principio"></a>
+    </div>
+</body>
+
+</html>
