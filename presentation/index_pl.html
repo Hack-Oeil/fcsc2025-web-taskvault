@@ -12,6 +12,7 @@
     <link rel="shortcut icon" href="./assets/images/favicon.ico" title="Favicon" />
     <link rel="stylesheet" href="./assets/css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script src="./assets/js/highlight.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Sprawdza, czy okno znajduje się wewnątrz ramki iframe
@@ -28,6 +29,12 @@
                         }
                     });
                 });
+            }
+            // Active la coloration syntaxique :
+            if (window.hljs) {
+                hljs.highlightAll();
+            } else {
+                console.error("Highlight.js non chargé !");
             }
         });
     </script>
